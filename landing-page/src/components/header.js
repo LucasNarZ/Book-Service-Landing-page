@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/styles.css';
 
-import  bookIcon  from '../icons/icon_book.svg';
+import  bookIcon  from '../icons/icon_book.png';
 
 export function Header(props){
     return(

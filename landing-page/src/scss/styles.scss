@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
+$color-1: white;
+$color-2: black;
+$color-3: rgb(43, 188, 255);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button, li{
+    cursor: pointer;
+}
+
+.subscribe-btn{
+    width: 140px;
+    height: 45px;
+    border-radius: 50px;
+    justify-self: flex-end;
+    
+    font-size: 16px;
+    background-color: $color-3;
+    transition: background-color .5s;
+}
+
+.subscribe-btn:hover{
+    background-color: rgb(97, 205, 255);
+}
+
+#header{
+    width: 100vw;
+    height: 70px;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(150, 150, 150);
+    align-items: center;
+    background-color: $color-1;
+    .logo{
+        width: 40px;
+        margin-left: 50px;
+        margin-right: auto;
+    }
+    .nav-bar{
+        display: flex;
+        justify-self: flex-end;
+        margin-right: 50px;
+        .nav-list{
+            display: flex;
+            column-gap: 50px;
+            list-style: none;
+            li{
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 1px;
+                    background-color: #000;
+                    transition: width 0.5s ease-out;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .subscribe-btn{
+        margin-right: 70px;
+    }
+}
+
+#hero{
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70px);
+    padding-top: 70px;
+    background-image: url('../images/hero-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-clip: content-box;
+    h1{
+        z-index: 1;
+        font-size: 40px;
+        color: $color-1;
+        width: 900px;
+        text-align: center;
+    }
+    p{
+        z-index: 1;
+        width: 500px;
+        color: $color-1;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .subscribe-btn{
+        z-index: 1;
+        margin-top: 60px;
+    }
+}
+#hero::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    mix-blend-mode: multiply;
+}
+
+#features{
+    width: 100vw;
+    height: 100vh;
+}

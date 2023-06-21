@@ -92,7 +92,7 @@ export function Questions(){
                     </AccordionDetails>
                 </Accordion>
                 </Accordion>
-                <button className='subscribe-btn'>Subscribe</button>
+                <a href='/plans'><button className='subscribe-btn'>Subscribe</button></a>
             </Container>
         </React.Fragment>
     )

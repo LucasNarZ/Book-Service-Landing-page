@@ -12,10 +12,11 @@ export function Header(props){
                     <ul className='nav-list'>
                         <li><a href='/'>Home</a></li>
                         <li><a href='#'>Plans</a></li>
+
                         <li><a href='/about-us'>About Us</a></li>
                     </ul>
                 </nav>
-                <button className='subscribe-btn'>Subscribe</button>
+                <a href='/plans'><button className='subscribe-btn'>Subscribe</button></a>
             </header>
         </React.Fragment>
     )

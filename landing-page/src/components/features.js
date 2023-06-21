@@ -30,7 +30,7 @@ export function Features(props){
                     <img src={image3} className='feature-image'/>
                     <p className='feature-description'>We've simplified the process of discovering and acquiring new books. You can easily browse through curated collections, explore thematic book lists, and discover hidden gems recommended by our team of avid readers. Whether you're a fan of thrillers, historical fiction, or non-fiction, our platform provides a seamless experience for expanding your literary horizons.</p>
                 </Container>
-                <button className='subscribe-btn'>Subscribe</button>
+                <a href='/plans'><button className='subscribe-btn'>Subscribe</button></a>
             </Container>
         </React.Fragment>
     )

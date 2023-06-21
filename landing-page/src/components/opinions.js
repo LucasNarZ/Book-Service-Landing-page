@@ -33,7 +33,7 @@ export function Opinions(props){
                         <p> Sarah M.</p>
                     </div>
                 </div>
-                <button className='subscribe-btn'>Subscribe</button>
+                <a href='/plans'><button className='subscribe-btn'>Subscribe</button></a>
             </section>
         </React.Fragment>
     );

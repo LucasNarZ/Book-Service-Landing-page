@@ -10,10 +10,9 @@ export function Header(props){
                 <img src={bookIcon} className='logo'/>
                 <nav className='nav-bar'>
                     <ul className='nav-list'>
-                        <li>Home</li>
-                        <li>Plans</li>
-                        <li>Past Books</li>
-                        <li>About Us</li>
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='#'>Plans</a></li>
+                        <li><a href='/about-us'>About Us</a></li>
                     </ul>
                 </nav>
                 <button className='subscribe-btn'>Subscribe</button>

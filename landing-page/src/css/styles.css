@@ -57,6 +57,10 @@ button, li {
 #header .nav-bar .nav-list li {
   position: relative;
 }
+#header .nav-bar .nav-list li a {
+  text-decoration: none;
+  color: black;
+}
 #header .nav-bar .nav-list li::after {
   content: "";
   position: absolute;
@@ -120,30 +124,25 @@ button, li {
   mix-blend-mode: multiply;
 }
 
-#features {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#features h1 {
+.features h1, .about-us h1 {
   margin-top: 50px;
   font-size: 40px;
   margin-bottom: 30px;
 }
-#features .feature {
+.features .feature, .features .about-us-part, .about-us .feature, .about-us .about-us-part {
   display: flex;
   column-gap: 80px;
   align-items: center;
-  margin: 50px 0;
+  margin: 10px 0;
+  justify-content: center;
 }
-#features .feature .feature-image {
+.features .feature .feature-image, .features .feature .about-us-image, .features .about-us-part .feature-image, .features .about-us-part .about-us-image, .about-us .feature .feature-image, .about-us .feature .about-us-image, .about-us .about-us-part .feature-image, .about-us .about-us-part .about-us-image {
   width: 400px;
 }
-#features .feature .feature-description {
+.features .feature .feature-description, .features .feature .about-us-description, .features .about-us-part .feature-description, .features .about-us-part .about-us-description, .about-us .feature .feature-description, .about-us .feature .about-us-description, .about-us .about-us-part .feature-description, .about-us .about-us-part .about-us-description {
   width: 400px;
 }
-#features .subscribe-btn {
+.features .subscribe-btn, .about-us .subscribe-btn {
   margin-bottom: 50px;
 }
 
@@ -152,6 +151,7 @@ button, li {
   flex-direction: column;
   align-items: center;
   border-top: 1px rgb(233, 233, 233) solid;
+  border-bottom: 1px rgb(240, 240, 240) solid;
 }
 #opinions-sec h1 {
   margin-top: 50px;
@@ -170,7 +170,6 @@ button, li {
 #opinions-sec .opnions .opinion img {
   width: 50px;
   border-radius: 50%;
-  margin-top: 20px;
 }
 #opinions-sec .opnions .opinion p:nth-child(1) {
   width: 350px;
@@ -178,10 +177,112 @@ button, li {
   padding: 15px;
   border-radius: 5px;
   height: 200px;
-  background-color: rgb(248, 248, 248);
+  background-color: rgb(240, 240, 240);
 }
 #opinions-sec .subscribe-btn {
   margin: 60px 0;
+}
+
+#questions h1 {
+  margin: 50px 0;
+}
+#questions .accordion {
+  width: 800px;
+  margin: 10px 0;
+}
+#questions .subscribe-btn {
+  margin: 50px 0;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  background-color: rgb(91, 91, 255);
+  color: white;
+}
+#footer img {
+  width: 90px;
+}
+#footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.about-us {
+  width: 100vw;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-us > p {
+  width: 800px;
+  text-align: center;
+}
+.about-us > h2 {
+  margin-top: 50px;
+  text-align: center;
+}
+.about-us .about-us-part {
+  margin-top: 50px;
+}
+.about-us .about-us-part .about-us-description {
+  margin-top: 10px;
+}
+
+#contact-us-section, #sign-up-section, #sign-in-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 30px;
+  align-items: center;
+}
+#contact-us-section img, #sign-up-section img, #sign-in-section img {
+  width: 110px;
+}
+#contact-us-section .form, #sign-up-section .form, #sign-in-section .form {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 300px;
+  height: 450px;
+  padding-left: 20px;
+}
+#contact-us-section .form .outlined-basic, #sign-up-section .form .outlined-basic, #sign-in-section .form .outlined-basic {
+  margin: 10px 0;
+}
+#contact-us-section .form .outlined-basic input, #sign-up-section .form .outlined-basic input, #sign-in-section .form .outlined-basic input {
+  width: 250px;
+}
+#contact-us-section .form .send-a-message, #sign-up-section .form .send-a-message, #sign-in-section .form .send-a-message {
+  font-size: 20px;
+  margin: 20px 0;
+}
+#contact-us-section .form .submit, #sign-up-section .form .submit, #sign-in-section .form .submit {
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: rgb(43, 188, 255);
+  color: white;
+  border-radius: 50px;
+  border: none;
+  width: 120px;
+  height: 30px;
+}
+#contact-us-section textarea, #sign-up-section textarea, #sign-in-section textarea {
+  border: 1px solid rgb(133, 133, 133);
+  padding: 2px;
+}
+#contact-us-section textarea:focus, #sign-up-section textarea:focus, #sign-in-section textarea:focus {
+  border: 1px solid rgb(255, 0, 0);
+}
+#contact-us-section .terms, #sign-up-section .terms, #sign-in-section .terms {
+  font-size: 10px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

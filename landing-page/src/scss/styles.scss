@@ -223,7 +223,6 @@ button, li{
     }
 }
 
-
 .about-us{
     width: 100vw;
     padding-top: 70px;
@@ -247,7 +246,6 @@ button, li{
         }
     }
 }
-
 
 #contact-us-section, #sign-up-section, #sign-in-section{
     height: 100vh;
@@ -346,5 +344,19 @@ button, li{
             left: 50%;
             transform: translate(-50%);
         }
+    }
+}
+
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    h2{
+        margin: 40px 0;
+    }
+    .input1{
+        width: 400px;
     }
 }

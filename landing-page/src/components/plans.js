@@ -32,7 +32,7 @@ export function Plans(){
                         <CheckIcon />
                         <p>Community Interaction</p>
                     </div>
-                    <a href='/plans'><button className='subscribe-btn'>Choose</button></a>
+                    <a href='/subscribe'><button className='subscribe-btn'>Choose</button></a>
                 </Container>
                 <Container className='plan'>
                     <h2>Surprise Genre Book Plan</h2>
@@ -57,7 +57,7 @@ export function Plans(){
                         <CheckIcon />
                         <p>Surprise Gifts</p>
                     </div>
-                    <a href='/plans'><button className='subscribe-btn'>Choose</button></a>
+                    <a href='/subscribe'><button className='subscribe-btn'>Choose</button></a>
                 </Container>
                 
             </div>

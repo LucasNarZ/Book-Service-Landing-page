@@ -328,4 +328,18 @@ button, li {
   transform: translate(-50%);
 }
 
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.subscribe h2 {
+  margin: 40px 0;
+}
+.subscribe .input1 {
+  width: 400px;
+}
+
 /*# sourceMappingURL=styles.css.map */

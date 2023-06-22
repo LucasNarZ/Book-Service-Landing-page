@@ -25,8 +25,8 @@ export function ContactUs(props){
                     <TextField className="outlined-basic" label="Email" variant="outlined"  required type='email' />
                     <TextField className="outlined-basic" label="Subject" variant="outlined"  required />
                     <label>Message</label><br/>
-                    <textarea name="" id="" cols="38" rows="5" required></textarea>
-                    <input type="submit" className='submit'/>
+                    <textarea name="" id="" cols="23.5" rows="3" required></textarea>
+                    <input type="submit" className='submit' value="Send"/>
                 </form>
             </div>
         </section>

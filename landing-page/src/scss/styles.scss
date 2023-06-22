@@ -25,7 +25,6 @@ button, li{
     height: 45px;
     border-radius: 50px;
     justify-self: flex-end;
-    
     font-size: 16px;
     background-color: $color-3;
     transition: background-color .5s;
@@ -114,8 +113,10 @@ button, li{
         margin-top: 40px;
         text-align: center;
     }
+    a{
+        z-index: 99;
+    }
     .subscribe-btn{
-        z-index: 1;
         margin-top: 60px;
     }
 }
@@ -229,9 +230,13 @@ button, li{
     display: flex;
     flex-direction: column;
     align-items: center;
+    h1{
+        text-align: center;
+    }
     & > p{
         width: 800px;
         text-align: center;
+        margin: 0 auto;
     }
     & > h2{
         margin-top: 50px;
@@ -291,7 +296,7 @@ button, li{
         padding: 2px;
     }
     textarea:focus{
-        border: 1px solid rgb(255, 0, 0);
+        border: 1px solid rgb(0, 225, 255);
     }
 
     .terms{

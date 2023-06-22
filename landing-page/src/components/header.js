@@ -11,7 +11,7 @@ export function Header(props){
                 <nav className='nav-bar'>
                     <ul className='nav-list'>
                         <li><a href='/'>Home</a></li>
-                        <li><a href='#'>Plans</a></li>
+                        <li><a href='/plans'>Plans</a></li>
 
                         <li><a href='/about-us'>About Us</a></li>
                     </ul>

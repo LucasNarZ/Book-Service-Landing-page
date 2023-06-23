@@ -41,6 +41,10 @@
     ]
   },
   "devDependencies": {
-    "file-loader": "^6.2.0"
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "postcss-loader": "^7.3.3",
+    "source-map-loader": "^4.0.1",
+    "webpack": "^5.88.0"
   }
 }

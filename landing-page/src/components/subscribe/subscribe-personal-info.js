@@ -24,6 +24,21 @@ export function SubscribePersonal(){
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
+
+    const validateEmail = (email) => {
+        if (email.length < 3) {
+            return false;
+          }
+        
+          var indice = email.indexOf("@");
+          
+          if (indice >= 1 && indice <= email.length - 2) {
+            return true;
+          }
+        
+    }
+
+
     
     return(
         <React.Fragment>
@@ -45,11 +60,11 @@ export function SubscribePersonal(){
                         alignItems:"center"
                         }}>
                         <TextField  className='input1' label="Name" variant="outlined"  error={name == "" && error == true} required onChange={(e) => {setName(e.target.value)}}/>
-                        <TextField className='input1' label="Email" variant="outlined" type="email" required onChange={(e) => {setEmail(e.target.value)}}/>
-                        <TextField  className='input1' label="Phone" variant="outlined" type="phone" onChange={(e) => {setPhone(e.target.value)}} required/>
-                        <TextField  type={showPassword ? 'text' : 'password'} className='input1' label="Password" variant="outlined" required onChange={(e) => {setPassword(e.target.value)}}/>
+                        <TextField className='input1' label="Email" variant="outlined" type="email" error={(email == "" || !validateEmail(email)) && error == true} required onChange={(e) => {setEmail(e.target.value)}}/>
+                        <TextField  className='input1' label="Phone" variant="outlined" error={phone == "" && error == true} type="number" onChange={(e) => {setPhone(e.target.value)}} required/>
+                        <TextField  type={showPassword ? 'text' : 'password'} className='input1' error={password == "" && error == true} label="Password" variant="outlined" required onChange={(e) => {setPassword(e.target.value)}}/>
                         <input className='subscribe-btn' type="submit" onClick={() =>{
-                            if(name || email || password || phone)navigate('/subscribe/address')
+                            if(name && email && password && phone)navigate('/subscribe/address')
                             else alert("Fill all statements");setError(true)
                         }} value="Continue"/>
                         </Container>

@@ -3,6 +3,9 @@ import '../../css/styles.css';
 
 import { Container, LinearProgress } from "@mui/material";
 
+import { changePlan } from "../../redux/reducer.js";
+
+import { useSelector } from 'react-redux';
 
 export function SubscribeFinish(props){
     return(
@@ -20,7 +23,7 @@ export function SubscribeFinish(props){
                     marginY: "0"
                 }}/>
                 <h1>Congratulations!</h1>
-                <h2>You just acquired the </h2>
+                <h2>You just acquired the {useSelector(state => state.plan.Plan)}</h2>
             </Container>
         </React.Fragment>
     )

@@ -4,7 +4,11 @@ import '../../css/styles.css';
 
 import { Container, TextField, LinearProgress } from '@mui/material';
 
+import { useNavigate } from 'react-router-dom';
+
 export function SubscribePayment(props){
+    const Navigate = useNavigate();
+
     return(
         <React.Fragment>
             <section className='subscribe'>
@@ -27,7 +31,9 @@ export function SubscribePayment(props){
                         <TextField id="Cardholder Name" className='input1' label="Cardholder Name" variant="outlined" value=" John Doe" required/>
                         <TextField id="Expiration Date" className='input1' value="12/24" label="Expiration Date" variant="outlined" required/>
                         <TextField id="CVV" className='input1' label="CVV" variant="outlined" value="123" required/>
-                        <input className='subscribe-btn' type="submit" value="Finish"/>
+                        <input className='subscribe-btn' type="submit" value="Finish" onClick={() => {
+                            Navigate("/subscribe/finish")
+                        }}/>
                     </Container>
                 </form>
             </section>

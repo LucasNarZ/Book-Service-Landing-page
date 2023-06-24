@@ -3,9 +3,21 @@ import '../css/styles.css';
 
 import  bookIcon  from '../icons/icon_book.png';
 
+import { changePlan } from "../redux/reducer.js";
+import { useDispatch } from 'react-redux';
+
 import CheckIcon from '@mui/icons-material/Check';
 import { Container } from '@mui/material';
 export function Plans(){
+    const dispatch = useDispatch();
+    const choosePlan = (plan) => {
+        switch(plan){
+            case "especific":dispatch(changePlan("Select Your Book Plan"));
+            case "surprice":dispatch(changePlan("Surprise Genre Book Plan"));
+
+        }
+    }
+
     return(
         <React.Fragment>
             <div className="plans" >
@@ -32,7 +44,7 @@ export function Plans(){
                         <CheckIcon />
                         <p>Community Interaction</p>
                     </div>
-                    <a href='/subscribe/personal'><button className='subscribe-btn'>Choose</button></a>
+                    <a href='/subscribe/personal'><button className='subscribe-btn' onClick={() => choosePlan("especific")}>Choose</button></a>
                 </Container>
                 <Container className='plan'>
                     <h2>Surprise Genre Book Plan</h2>
@@ -57,7 +69,7 @@ export function Plans(){
                         <CheckIcon />
                         <p>Surprise Gifts</p>
                     </div>
-                    <a href='/subscribe/personal'><button className='subscribe-btn'>Choose</button></a>
+                    <a href='/subscribe/personal'><button className='subscribe-btn' onClick={()=> choosePlan("surprice")}>Choose</button></a>
                 </Container>
                 
             </div>

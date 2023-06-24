@@ -367,4 +367,7 @@ button, li{
     .subscribe-btn::placeholder{
         padding:auto;
     }
+    input[type="submit"]{
+        cursor: pointer;
+    }
 }

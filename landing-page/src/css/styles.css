@@ -350,5 +350,8 @@ button, li {
 .subscribe .subscribe-btn::placeholder {
   padding: auto;
 }
+.subscribe input[type=submit] {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=styles.css.map */

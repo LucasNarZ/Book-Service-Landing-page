@@ -8,6 +8,7 @@ import { Plans } from './components/plans';
 import { SubscribePersonal } from './components/subscribe/subscribe-personal-info.js';
 import { SubscribeAddress } from './components/subscribe/subscribe-address-info.js';
 import { SubscribePayment } from './components/subscribe/subscribe-payment-info.js';
+import { SubscribeFinish } from './components/subscribe/subscribe-finish';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/subscribe/personal" element={<SubscribePersonal />}/>
         <Route path="/subscribe/address" element={<SubscribeAddress />}/>
         <Route path="/subscribe/payment" element={<SubscribePayment />}/>
+        <Route path='/subscribe/finish' element={<SubscribeFinish />}/>
       </Routes>
       
     </Router>

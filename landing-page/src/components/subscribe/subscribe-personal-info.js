@@ -3,27 +3,38 @@ import '../../css/styles.css';
 
 import { useState } from 'react';
 
-import { LinearProgress, TextField, Container, InputAdornment, IconButton  } from '@mui/material';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { LinearProgress, Container, TextField } from '@mui/material';
+
+
 
 import { useNavigate } from 'react-router-dom';
 
 export function SubscribePersonal(){
-    const [value, setValue] =useState(0);
     const [showPassword, setShowPassword] = useState(false);
-    const Navigate = useNavigate();
+    const navigate = useNavigate();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [phone, setPhone] = useState("");
+    const [error, setError] = useState(false);
 
+
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+    };
+    
     return(
         <React.Fragment>
             <section className='subscribe'>
-                <LinearProgress value={value} variant='determinate' sx={{
+                <LinearProgress value={0} variant='determinate' sx={{
                     margin:"100px",
                     height: "10px",
                     width: "400px",
                     borderRadius: "50px",
                     marginY: "0"
                 }}/>
-                 
                 <React.Fragment>
                     <h2>Account Info</h2>
                     <form>
@@ -33,26 +44,17 @@ export function SubscribePersonal(){
                         rowGap: "20px",
                         alignItems:"center"
                         }}>
-                        <TextField id="outlined-basic" className='input1' label="Name" variant="outlined" required/>
-                        <TextField id="outlined-basic" className='input1' label="Email" variant="outlined" type="email" required/>
-                        <TextField id="outlined-basic" className='input1' label="Phone" variant="outlined" type="phone" required/>
-                        <TextField id="outlined-basic" type={showPassword ? 'text' : 'password'} className='input1' label="Password" variant="outlined" inputProps={{
-                            endAdornment:(
-                                <InputAdornment position="end">
-                                <IconButton onClick={() => {setShowPassword(!showPassword)}}>
-                                {showPassword ? <VisibilityOff /> : <Visibility />}
-                                </IconButton>
-                                </InputAdornment>
-                            )
-                        }} required/>
-                        <input className='subscribe-btn' onClick={() =>{
-                            Navigate('/subscribe/address')
-                        }} placeholder="Continue"/>
+                        <TextField  className='input1' label="Name" variant="outlined"  error={name == "" && error == true} required onChange={(e) => {setName(e.target.value)}}/>
+                        <TextField className='input1' label="Email" variant="outlined" type="email" required onChange={(e) => {setEmail(e.target.value)}}/>
+                        <TextField  className='input1' label="Phone" variant="outlined" type="phone" onChange={(e) => {setPhone(e.target.value)}} required/>
+                        <TextField  type={showPassword ? 'text' : 'password'} className='input1' label="Password" variant="outlined" required onChange={(e) => {setPassword(e.target.value)}}/>
+                        <input className='subscribe-btn' type="submit" onClick={() =>{
+                            if(name || email || password || phone)navigate('/subscribe/address')
+                            else alert("Fill all statements");setError(true)
+                        }} value="Continue"/>
                         </Container>
                     </form>
-                    
                 </React.Fragment>
-                
             </section>
         </React.Fragment>
     )

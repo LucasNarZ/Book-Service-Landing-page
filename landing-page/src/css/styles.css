@@ -347,5 +347,8 @@ button, li {
 .subscribe .input1 {
   width: 400px;
 }
+.subscribe .subscribe-btn::placeholder {
+  padding: auto;
+}
 
 /*# sourceMappingURL=styles.css.map */

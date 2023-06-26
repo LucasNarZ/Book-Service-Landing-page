@@ -4,41 +4,25 @@ import '../../css/styles.css';
 import { useState } from 'react';
 
 import { LinearProgress, Container, TextField } from '@mui/material';
-
 import { useDispatch } from 'react-redux';
-
 import { useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 import { updateUserData } from '../../redux/reducer';
 
+
+
+
 export function SubscribePersonal(){
-
+    const {register, handleSubmit, formState: {errors}} = useForm();
     const dispatch = useDispatch();
-
-    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [phone, setPhone] = useState("");
-    const [error, setError] = useState(false);
 
-
-    const validateEmail = (email) => {
-        if (email.length < 3) {
-            return false;
-          }
-        
-          var indice = email.indexOf("@");
-          
-          if (indice >= 1 && indice <= email.length - 2) {
-            return true;
-          }
-        
+    const onSubmit = (data) => {
+        dispatch(updateUserData({Name:data.name, Email:data.email, Password:data.password, Phone:data.phone}))
+        navigate('/subscribe/address')
     }
 
-
-    
     return(
         <React.Fragment>
             <section className='subscribe'>
@@ -51,24 +35,18 @@ export function SubscribePersonal(){
                 }}/>
                 <React.Fragment>
                     <h2>Account Info</h2>
-                    <form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <Container className='content' sx={{
                         display:"flex",
                         flexDirection: "column",
                         rowGap: "20px",
                         alignItems:"center"
                         }}>
-                        <TextField  className='input1' label="Name" variant="outlined"  error={name == "" && error == true} required onChange={(e) => {setName(e.target.value)}}/>
-                        <TextField className='input1' label="Email" variant="outlined" type="email" error={(email == "" || !validateEmail(email)) && error == true} required onChange={(e) => {setEmail(e.target.value)}}/>
-                        <TextField  className='input1' label="Phone" variant="outlined" error={phone == "" && error == true} type="number" onChange={(e) => {setPhone(e.target.value)}} required/>
-                        <TextField  type={showPassword ? 'text' : 'password'} className='input1' error={password == "" && error == true} label="Password" variant="outlined" required onChange={(e) => {setPassword(e.target.value)}}/>
-                        <input className='subscribe-btn' type="submit" onClick={() =>{
-                            if(name && email && password && phone){
-                                dispatch(updateUserData({Name:name, Email:email, Password:password, Phone:phone}))
-                                navigate('/subscribe/address')
-                            }
-                            else alert("Fill all statements");setError(true)
-                        }} value="Continue"/>
+                        <TextField  className='input1' label="Name" variant="outlined"  {...register("name", {required:true})}/>
+                        <TextField className='input1' label="Email" variant="outlined" type="email" error={!!errors.email}{...register("email", {required:true, pattern:/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/})}/>
+                        <TextField  className='input1' label="Phone" variant="outlined" {...register("phone", {required:true, pattern:/^[0-9]{7}$/})}/>
+                        <TextField  type="password" className='input1' {...register("password", {required:true})} />
+                        <input className='subscribe-btn' type="submit" value="Continue"/>
                         </Container>
                     </form>
                 </React.Fragment>

@@ -3,7 +3,7 @@ import storage from 'redux-persist/lib/storage'
 import { persistReducer } from 'redux-persist';
 import { configureStore } from "@reduxjs/toolkit";
 
-import { activePlanReducer } from "./reducer";
+import { activePlanReducer, activeBarReducer, userDataReducer } from "./reducer";
 
 const persistConfig = {
     key:"root",
@@ -13,6 +13,8 @@ const persistConfig = {
 
 const reducer = combineReducers({
     plan:activePlanReducer,
+    activeBar:activeBarReducer,
+    userData:userDataReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, reducer)

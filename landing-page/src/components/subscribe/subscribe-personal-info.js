@@ -5,11 +5,16 @@ import { useState } from 'react';
 
 import { LinearProgress, Container, TextField } from '@mui/material';
 
-
+import { useDispatch } from 'react-redux';
 
 import { useNavigate } from 'react-router-dom';
 
+import { updateUserData } from '../../redux/reducer';
+
 export function SubscribePersonal(){
+
+    const dispatch = useDispatch();
+
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     const [name, setName] = useState("");
@@ -18,12 +23,6 @@ export function SubscribePersonal(){
     const [phone, setPhone] = useState("");
     const [error, setError] = useState(false);
 
-
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-    const handleMouseDownPassword = (event) => {
-        event.preventDefault();
-    };
 
     const validateEmail = (email) => {
         if (email.length < 3) {
@@ -64,7 +63,10 @@ export function SubscribePersonal(){
                         <TextField  className='input1' label="Phone" variant="outlined" error={phone == "" && error == true} type="number" onChange={(e) => {setPhone(e.target.value)}} required/>
                         <TextField  type={showPassword ? 'text' : 'password'} className='input1' error={password == "" && error == true} label="Password" variant="outlined" required onChange={(e) => {setPassword(e.target.value)}}/>
                         <input className='subscribe-btn' type="submit" onClick={() =>{
-                            if(name && email && password && phone)navigate('/subscribe/address')
+                            if(name && email && password && phone){
+                                dispatch(updateUserData({Name:name, Email:email, Password:password, Phone:phone}))
+                                navigate('/subscribe/address')
+                            }
                             else alert("Fill all statements");setError(true)
                         }} value="Continue"/>
                         </Container>

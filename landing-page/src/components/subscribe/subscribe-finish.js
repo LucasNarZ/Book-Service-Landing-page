@@ -1,29 +1,37 @@
 import React from "react";
 import '../../css/styles.css';
 
-import { Container, LinearProgress } from "@mui/material";
+import { Container, LinearProgress, Button } from "@mui/material";
 
 import { changePlan } from "../../redux/reducer.js";
 
 import { useSelector } from 'react-redux';
 
+import { useNavigate } from "react-router-dom";
+
 export function SubscribeFinish(props){
+    const navigate = useNavigate();
+
     return(
         <React.Fragment>
             <Container className="finish-section" maxWidth="sm" sx={{
                 display: "flex",
                 flexDirection:"column",
                 alignItems:"center",
+                height:"100vh",
             }}>
                 <LinearProgress value={100} variant='determinate' sx={{
-                    margin:"100px",
+                    margin:"90px",
                     height: "10px",
                     width: "400px",
                     borderRadius: "50px",
-                    marginY: "0"
+                    marginBottom: "40px"
                 }}/>
                 <h1>Congratulations!</h1>
-                <h2>You just acquired the {useSelector(state => state.plan.Plan)}</h2>
+                <h2>You just acquired the {useSelector(state => state.plan)}</h2>
+                <button className='subscribe-btn' onClick={() => {
+                    navigate('/client-area')
+                }}>Continue</button>
             </Container>
         </React.Fragment>
     )

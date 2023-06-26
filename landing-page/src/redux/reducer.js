@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const activePlanSlice = createSlice({
     name:"plan",
-    initialState:{Plan:""},
+    initialState:"",
     reducers:{
         changePlan(state, action){
-            state.Plan = action.payload;
+            return action.payload;
         }
     }
 })

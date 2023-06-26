@@ -11,10 +11,11 @@ import { Container } from '@mui/material';
 export function Plans(){
     const dispatch = useDispatch();
     const choosePlan = (plan) => {
-        switch(plan){
-            case "especific":dispatch(changePlan("Select Your Book Plan"));
-            case "surprice":dispatch(changePlan("Surprise Genre Book Plan"));
-
+        if(plan === "surprise"){
+            dispatch(changePlan("Surprise Genre Book Plan"));
+        }
+        else if(plan === "especific"){
+            dispatch(changePlan("Select Your Book Plan"));
         }
     }
 
@@ -69,7 +70,7 @@ export function Plans(){
                         <CheckIcon />
                         <p>Surprise Gifts</p>
                     </div>
-                    <a href='/subscribe/personal'><button className='subscribe-btn' onClick={()=> choosePlan("surprice")}>Choose</button></a>
+                    <a href='/subscribe/personal'><button className='subscribe-btn' onClick={()=> choosePlan("surprise")}>Choose</button></a>
                 </Container>
                 
             </div>

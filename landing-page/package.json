@@ -49,6 +49,7 @@
     "file-loader": "^6.2.0",
     "postcss-loader": "^7.3.3",
     "source-map-loader": "^4.0.1",
-    "webpack": "^5.88.0"
+    "webpack": "^5.88.0",
+    "@babel/plugin-proposal-private-property-in-object" : "^x.x.x"
   }
 }

@@ -1,8 +1,6 @@
 import React from 'react';
 import '../css/styles.css';
 
-import  bookIcon  from '../icons/icon_book.png';
-
 import { changePlan } from "../redux/reducer.js";
 import { useDispatch } from 'react-redux';
 

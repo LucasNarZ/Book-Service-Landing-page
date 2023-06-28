@@ -55,6 +55,11 @@ export function ClientArea(props){
                             })}
                         </React.Fragment>
                         }
+                        {useSelector(state => state.activeBar) === "p2" && 
+                        <React.Fragment>
+                            
+                        </React.Fragment>
+                        }
                     </div>
                 </div>
             </section>

@@ -26,6 +26,9 @@ const userDataSlice = createSlice({
     reducers:{
         updateUserData(state, action){
             return [...state, action.payload]
+        },
+        resetUserData(state, action){
+            return []
         }
     }
 })
@@ -37,4 +40,4 @@ export const userDataReducer = userDataSlice.reducer;
 
 export const { changePlan } = activePlanSlice.actions;
 export const { changeActive } = activeBarSlice.actions;
-export const { updateUserData } = userDataSlice.actions;
+export const { updateUserData, resetUserData } = userDataSlice.actions;

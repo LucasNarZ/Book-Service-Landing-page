@@ -1,14 +1,12 @@
 import React from 'react';
 import '../../css/styles.css';
 
-import { useState } from 'react';
-
 import { LinearProgress, Container, TextField } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-import { updateUserData } from '../../redux/reducer';
+import { updateUserData, resetUserData } from '../../redux/reducer';
 
 
 
@@ -19,6 +17,7 @@ export function SubscribePersonal(){
     const navigate = useNavigate();
 
     const onSubmit = (data) => {
+        dispatch(resetUserData())
         dispatch(updateUserData({Name:data.name, Email:data.email, Password:data.password, Phone:data.phone}))
         navigate('/subscribe/address')
     }
@@ -42,10 +41,10 @@ export function SubscribePersonal(){
                         rowGap: "20px",
                         alignItems:"center"
                         }}>
-                        <TextField  className='input1' label="Name" variant="outlined"  {...register("name", {required:true})}/>
-                        <TextField className='input1' label="Email" variant="outlined" type="email" error={!!errors.email}{...register("email", {required:true, pattern:/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/})}/>
-                        <TextField  className='input1' label="Phone" variant="outlined" {...register("phone", {required:true, pattern:/^[0-9]{7}$/})}/>
-                        <TextField  type="password" className='input1' {...register("password", {required:true})} />
+                        <TextField  className='input1' label="Name" variant="outlined"  error={!!errors.name} {...register("name", {required:true})}/>
+                        <TextField className='input1' label="Email" variant="outlined" error={!!errors.email}{...register("email", {required:true, pattern:/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/})}/>
+                        <TextField  className='input1' label="Phone" variant="outlined" error={!!errors.phone}{...register("phone", {required:true, pattern:/^[0-9]{7}$/})}/>
+                        <TextField  type="password" className='input1'label="Password" error={!!errors.password} {...register("password", {required:true})} />
                         <input className='subscribe-btn' type="submit" value="Continue"/>
                         </Container>
                     </form>

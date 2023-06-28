@@ -1,9 +1,7 @@
 import React from "react";
 import '../../css/styles.css';
 
-import { Container, LinearProgress, Button } from "@mui/material";
-
-import { changePlan } from "../../redux/reducer.js";
+import { Container, LinearProgress } from "@mui/material";
 
 import { useSelector } from 'react-redux';
 

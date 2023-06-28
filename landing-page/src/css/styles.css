@@ -368,8 +368,7 @@ button, li {
   width: 100vw;
   height: 100vh;
 }
-
-.client-area-header {
+.client-area .client-area-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -381,50 +380,62 @@ button, li {
   border-bottom: solid rgb(231, 231, 231) 1px;
   padding: 0 50px;
 }
-.client-area-header img {
+.client-area .client-area-header img {
   width: 100px;
 }
-.client-area-header .person-icon {
+.client-area .client-area-header .person-icon {
   font-size: 45px;
 }
-
-.active {
-  background-color: #ececec;
-}
-
-.lateral-bar {
+.client-area .lateral-bar {
   height: calc(100vh - 70px);
-  width: 300px;
+  width: 500px;
   border-right: solid rgb(230, 230, 230) 1px;
   transform: translateY(70px);
 }
-.lateral-bar p {
+.client-area .lateral-bar p {
   padding-left: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: solid rgb(230, 230, 230) 1px;
   cursor: pointer;
 }
-.lateral-bar p[class=""]:hover {
+.client-area .lateral-bar p[class=""]:hover {
   background-color: #f8f8f8;
 }
-
-.main-page {
+.client-area .lateral-bar .active {
+  background-color: #ececec;
+}
+.client-area .main-page {
   display: flex;
   padding-bottom: 50px;
 }
-.main-page .info {
+.client-area .main-page .info {
   padding-top: 70px;
   margin-top: 20px;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
 }
-.main-page .info h1 {
+.client-area .main-page .info h1 {
   font-size: 34px;
 }
-.main-page .info h2 {
+.client-area .main-page .info h2 {
   margin-top: 20px;
+}
+.client-area .main-page .info .plan-switch {
+  display: flex;
+  width: calc(100vw - 500px);
+  flex-direction: column;
+  align-items: center;
+}
+.client-area .main-page .info .plan-switch .plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.client-area .main-page .ac {
+  background-color: #dddddd;
+  cursor: default;
 }
 
 /*# sourceMappingURL=styles.css.map */

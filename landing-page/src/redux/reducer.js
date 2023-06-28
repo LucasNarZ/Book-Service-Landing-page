@@ -12,7 +12,7 @@ const activePlanSlice = createSlice({
 
 const activeBarSlice = createSlice({
     name:"activeBar",
-    initialState:"",
+    initialState:"p1",
     reducers:{
         changeActive(state, action){
             return action.payload;

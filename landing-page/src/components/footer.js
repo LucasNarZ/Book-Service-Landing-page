@@ -1,5 +1,3 @@
-
-
 import  bookIcon  from '../icons/icon_book.png';
 
 import React from 'react';

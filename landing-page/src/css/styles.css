@@ -438,4 +438,64 @@ button, li {
   cursor: default;
 }
 
+.genre-books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.genre-books .genres-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.genre-books .genre {
+  margin: 10px;
+  width: 130px;
+  height: 60px;
+  background-color: rgb(43, 188, 255);
+  border-radius: 10px;
+  transition: background-color 0.5s;
+}
+.genre-books .active {
+  background-color: #dddddd;
+}
+
+.select-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.select-book .books-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 40px;
+}
+.select-book .book {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 480px;
+}
+.select-book .book img {
+  width: 200px;
+}
+.select-book .book h2 {
+  height: 60px;
+  overflow-y: hidden;
+  text-align: center;
+}
+.select-book .book button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  margin: 10px;
+  width: 90px;
+  height: 30px;
+  background-color: rgb(43, 188, 255);
+  border-radius: 10px;
+  transition: background-color 0.5s;
+}
+
 /*# sourceMappingURL=styles.css.map */

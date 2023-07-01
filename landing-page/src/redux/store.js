@@ -3,7 +3,7 @@ import storage from 'redux-persist/lib/storage'
 import { persistReducer } from 'redux-persist';
 import { configureStore } from "@reduxjs/toolkit";
 
-import { activePlanReducer, activeBarReducer, userDataReducer } from "./reducer";
+import { activePlanReducer, activeBarReducer, userDataReducer, activeGenreReducer, activeBookReducer } from "./reducer";
 
 const persistConfig = {
     key:"root",
@@ -15,6 +15,8 @@ const reducer = combineReducers({
     plan:activePlanReducer,
     activeBar:activeBarReducer,
     userData:userDataReducer,
+    activeGenre: activeGenreReducer,
+    activeBook: activeBookReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, reducer)

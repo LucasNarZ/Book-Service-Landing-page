@@ -33,11 +33,35 @@ const userDataSlice = createSlice({
     }
 })
 
+const activeGenreSlice = createSlice({
+    name: "activeGenre",
+    initialState:'',
+    reducers:{
+        changeActiveGenre(state, action){
+            return action.payload;
+        }
+    }
+})
+
+const activeBookSlice = createSlice({
+    name:"activeBook",
+    initialState: [],
+    reducers:{
+        changeActiveBook(state, action){
+            return action.payload;
+        }
+    }
+})
+
 export const activePlanReducer = activePlanSlice.reducer;
 export const activeBarReducer = activeBarSlice.reducer;
 export const userDataReducer = userDataSlice.reducer;
+export const activeGenreReducer = activeGenreSlice.reducer;
+export const activeBookReducer = activeBookSlice.reducer;
 
 
 export const { changePlan } = activePlanSlice.actions;
 export const { changeActive } = activeBarSlice.actions;
 export const { updateUserData, resetUserData } = userDataSlice.actions;
+export const { changeActiveGenre } = activeGenreSlice.actions;
+export const { changeActiveBook } = activeBookSlice.actions;

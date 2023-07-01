@@ -4,6 +4,8 @@ import '../../css/styles.css';
 
 export function Plans({ plan, activeBar, changePlan }){
 
+
+
     return(
         <React.Fragment>
             {activeBar  === "p2" && 

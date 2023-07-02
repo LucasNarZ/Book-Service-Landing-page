@@ -75,10 +75,38 @@ button, li {
 #header .nav-bar .nav-list li:hover::after {
   width: 100%;
 }
+#header .nav-bar-burger {
+  position: absolute;
+  bottom: -40px;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 40px;
+  z-index: 100;
+  background-color: white;
+}
+#header .nav-bar-burger ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 100vw;
+}
+#header .nav-bar-burger ul a {
+  text-decoration: none;
+  color: #000;
+}
 #header .subscribe-btn {
   margin-right: 70px;
 }
 
+@media (max-width: 675px) {
+  #header .logo {
+    margin-left: 5px;
+  }
+  #header .subscribe-btn {
+    margin-right: 20px;
+  }
+}
 #hero {
   width: 100vw;
   overflow-x: hidden;
@@ -98,12 +126,14 @@ button, li {
   z-index: 1;
   font-size: 40px;
   color: white;
-  width: 900px;
+  width: 80vw;
+  max-width: 900px;
   text-align: center;
 }
 #hero p {
   z-index: 1;
-  width: 500px;
+  width: 80%;
+  max-width: 500px;
   color: white;
   margin-top: 40px;
   text-align: center;

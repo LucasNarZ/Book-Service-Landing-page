@@ -27,7 +27,7 @@ export function Opinions(props){
                         <p>Amanda S.</p>
                     </div>
                     <div className='opinion'>
-                        <p>The experience of subscribing to books exceeded my expectations. Alongside receiving an amazing book each month, I was captivated by the additional features offered by the platform. Author interviews and exclusive reviews further enhance my understanding and appreciation of the works. I am truly impressed with the service and can't wait to continue exploring new literary gems!</p>
+                        <p>The experience of subscribing to books exceeded my expectations. Alongside receiving an amazing book each month, I was captivated by the additional features offered by the platform. Author interviews and exclusive reviews further enhance my understanding and appreciation of the works.</p>
                         <Rating name="read-only" defaultValue={5} readOnly />
                         <img src={profile3} alt='user'/>
                         <p> Sarah M.</p>

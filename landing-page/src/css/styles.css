@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap");
+h1, p, h2 {
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -230,7 +234,7 @@ button, li {
 }
 
 @media (max-width: 1300px) {
-  .opnions {
+  .opinions {
     flex-direction: column;
   }
 }
@@ -238,7 +242,8 @@ button, li {
   margin: 50px 0;
 }
 #questions .accordion {
-  width: 800px;
+  width: 90vw;
+  max-width: 800px;
   margin: 10px 0;
 }
 #questions .subscribe-btn {
@@ -260,6 +265,9 @@ button, li {
 #footer a {
   text-decoration: none;
   color: white;
+}
+#footer p {
+  text-align: center;
 }
 
 .about-us {

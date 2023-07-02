@@ -13,7 +13,7 @@ export function Opinions(props){
         <React.Fragment>
             <section id='opinions-sec'>
                 <h1>Hear What Our Customers Say</h1>
-                <div className='opnions'>
+                <div className='opinions'>
                     <div className='opinion'>
                         <p>I was absolutely delighted with the variety of books and the monthly surprise I received through the subscription. Each delivery feels like unwrapping a literary treasure! The selected books always align with my chosen genre, and the quality of the editions is impeccable. I highly recommend this unique experience to all book lovers!</p>
                         <Rating name="read-only" defaultValue={5} readOnly />

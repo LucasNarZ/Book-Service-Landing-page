@@ -20,6 +20,7 @@ export function PersonalData({ userData, activeBar }){
                         return(
                             <TextField label={key} value={value} disabled sx={{
                                 width: "300px",
+                                m:"auto",
                                 marginTop:"30px",
                             }}/>
                         )
@@ -29,6 +30,7 @@ export function PersonalData({ userData, activeBar }){
                         return(
                             <TextField label={key} value={value} disabled sx={{
                                 width: "300px",
+                                m:"auto",
                                 marginTop:"30px",
                             }}/>
                         )
@@ -38,6 +40,7 @@ export function PersonalData({ userData, activeBar }){
                         return(
                             <TextField label={key} value={value} disabled sx={{
                                 width: "300px",
+                                m:"auto",
                                 marginTop:"30px",
                             }}/>
                         )

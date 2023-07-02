@@ -80,7 +80,8 @@ export function Questions(){
                     <AccordionDetails>
                         <p>At the moment, we offer shipping within EUA. However, we are actively working on expanding our services to reach book lovers around the world. Stay tuned for updates on international shipping!</p>
                     </AccordionDetails>
-                    <Accordion>
+                </Accordion>
+                <Accordion className="accordion">
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
@@ -90,7 +91,6 @@ export function Questions(){
                     <AccordionDetails>
                         <p>You can easily update your personal information and preferences by logging into your account on our website. From there, you can access your profile and make the desired changes. If you need any assistance, our support team is always ready to help.</p>
                     </AccordionDetails>
-                </Accordion>
                 </Accordion>
                 <a href='/plans'><button className='subscribe-btn'>Subscribe</button></a>
             </Container>

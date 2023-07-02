@@ -9,6 +9,7 @@ export function Header(props){
     const [width, setWidth] = useState(window.innerWidth);
     const [colapseMenu, setColapseMenu] = useState(false)
 
+
     const handleResize = () => {
         setWidth(window.innerWidth);
     }
@@ -39,7 +40,9 @@ export function Header(props){
                 <React.Fragment>
                     <MenuIcon fontSize="large" sx={{
                         m:"10px",
-                        cursor:"pointer", 
+                        cursor:"pointer",
+                        transform: colapseMenu ? "rotate(90deg)" : "0",
+                        transition: "transform .5s"
                     }} onClick={() => {
                         setColapseMenu(!colapseMenu)
                     }}/>    

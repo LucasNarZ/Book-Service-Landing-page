@@ -21,7 +21,8 @@ export function SubscribeFinish(props){
                 <LinearProgress value={100} variant='determinate' sx={{
                     margin:"90px",
                     height: "10px",
-                    width: "400px",
+                    maxWidth: "400px",
+                    width:"90vw",
                     borderRadius: "50px",
                     marginBottom: "40px"
                 }}/>

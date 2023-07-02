@@ -28,7 +28,8 @@ export function SubscribePersonal(){
                 <LinearProgress value={0} variant='determinate' sx={{
                     margin:"100px",
                     height: "10px",
-                    width: "400px",
+                    maxWidth: "400px",
+                    width:"90vw",
                     borderRadius: "50px",
                     marginY: "0"
                 }}/>

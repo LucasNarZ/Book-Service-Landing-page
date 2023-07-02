@@ -26,7 +26,8 @@ export function SubscribePayment(props){
                 <LinearProgress value={66} variant='determinate' sx={{
                     margin:"100px",
                     height: "10px",
-                    width: "400px",
+                    maxWidth: "400px",
+                    width:"90vw",
                     borderRadius: "50px",
                     marginY: "0"
                 }}/>

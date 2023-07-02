@@ -23,23 +23,23 @@ export function Plans(){
                 <Container className='plan'>
                     <h2>Select Your Book Plan</h2>
                     <p>Our Choose Your Own Book Plan allows you to handpick your desired book from our extensive collection.</p>
-                    <div className='feature'>
+                    <div className='plan-feature'>
                         <CheckIcon />
                         <p>Personalized Selection</p>
                     </div>
-                    <div className='feature'>
+                    <div className='plan-feature'>
                         <CheckIcon />
                         <p>Flexibility and Control</p>
                     </div>
-                    <div className='feature'>
+                    <div className='plan-feature'>
                         <CheckIcon />
                         <p>Extensive Book Selection</p>
                     </div>
-                    <div className='feature'>
+                    <div className='plan-feature'>
                         <CheckIcon />
                         <p>Tailored Reading Experience</p>
                     </div>
-                    <div className='feature'>
+                    <div className='plan-feature'>
                         <CheckIcon />
                         <p>Community Interaction</p>
                     </div>
@@ -48,23 +48,23 @@ export function Plans(){
                 <Container className='plan'>
                     <h2>Surprise Genre Book Plan</h2>
                     <p>With our Surprise Genre Book Plan, you'll receive a carefully selected book from a genre choose by you in each delivery.</p>
-                    <div className='feature'>
+                    <div className='plan-feature'>
                         <CheckIcon />
                         <p>Expert Curation</p>
                     </div>
-                    <div className='feature'>
+                    <div className='plan-feature'>
                         <CheckIcon />
                         <p>Surprise Elemen</p>
                     </div>
-                    <div className='feature'>
+                    <div className='plan-feature'>
                         <CheckIcon />
                         <p>Discover Hidden Gems</p>
                     </div>
-                    <div className='feature'>
+                    <div className='plan-feature'>
                         <CheckIcon />
                         <p>Genre Exploration</p>
                     </div>
-                    <div className='feature'>
+                    <div className='plan-feature'>
                         <CheckIcon />
                         <p>Surprise Gifts</p>
                     </div>

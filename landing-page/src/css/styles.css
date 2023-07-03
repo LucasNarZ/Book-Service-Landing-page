@@ -624,9 +624,6 @@ button, li {
   width: 300px;
   height: 480px;
 }
-.select-book .book img {
-  width: 200px;
-}
 .select-book .book h2 {
   height: 60px;
   overflow-y: hidden;

@@ -66,7 +66,7 @@ export function ChooseBook({ activeBar, plan, changeActiveGenre, activeGenre, ch
                                 const bookImage = book.volumeInfo?.imageLinks?.thumbnail;
                                 return(
                                     <div className="book" key={index}>
-                                        <img src={bookImage} alt="book"/>
+                                        <img src={bookImage} alt="book" width={200} height={284.38}/>
                                         <h2>{bookTitle}</h2>
                                         <button onClick={() => {
                                             changeActiveBook([bookImage, bookTitle]);

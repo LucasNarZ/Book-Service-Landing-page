@@ -109,6 +109,8 @@ button, li {
   }
   #header .subscribe-btn {
     margin-right: 20px;
+    width: 100px;
+    height: 52px;
   }
 }
 #hero {
@@ -235,7 +237,7 @@ button, li {
   margin: 60px 0;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1100px) {
   .opinions {
     flex-direction: column;
   }
@@ -578,12 +580,12 @@ button, li {
   background-color: #dddddd;
 }
 
-@media (min-width: 1350px) {
+@media (min-width: 1150px) {
   .genres-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
-@media (max-width: 1350px) {
+@media (max-width: 1150px) {
   .genres-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }

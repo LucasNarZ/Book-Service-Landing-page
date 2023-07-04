@@ -54,7 +54,7 @@ export function Plans(){
                     </div>
                     <div className='plan-feature'>
                         <CheckIcon />
-                        <p>Surprise Elemen</p>
+                        <p>Surprise Element</p>
                     </div>
                     <div className='plan-feature'>
                         <CheckIcon />

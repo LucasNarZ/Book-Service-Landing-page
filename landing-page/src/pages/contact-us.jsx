@@ -1,4 +1,3 @@
-import react from 'react';
 import '../css/styles.css';
 
 import  bookIcon  from '../icons/icon_book.png';

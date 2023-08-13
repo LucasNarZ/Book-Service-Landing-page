@@ -8,16 +8,15 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { updateUserData } from '../../redux/reducer';
 
-import { useState } from 'react';
 
 export function SubscribePayment(props){
     const Navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const [cardNumber, setCardNumber] = useState("4242 4242 4242 4242");
-    const [cardholderName, CardHolderName] = useState("436");
-    const [expirationDate, ExpirationDate] = useState("12/24");
-    const [CVV, setCVV] = useState(123);
+    const cardNumber = "4242 4242 4242 4242";
+    const cardholderName = "436";
+    const expirationDate = "12/24";
+    const CVV = 123;
 
 
     return(

@@ -1,8 +1,8 @@
 import React from 'react';
 import '../css/styles.css';
 
-import { Header } from './header';
-import { Footer } from './footer';
+import { Header } from '../components/header';
+import { Footer } from '../components/footer';
 
 import { Container } from '@mui/material';
 

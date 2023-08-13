@@ -54,7 +54,7 @@ export function ChooseBook({ activeBar, plan, changeActiveGenre, activeGenre, ch
                     {plan === "Select Your Book Plan" && 
                     <section className="select-book">
                         <h1>Selected Book for {currentMonth}:</h1>
-                        <img src={activeBook[0]} alt="book"/>
+                        <img src={activeBook[0] || GetBooks(1, "Fiction")} alt="book"/>
                         <h2>{activeBook[1]}</h2>
                         <div className="books-grid">
                             {GetBooks(40, "Fiction")

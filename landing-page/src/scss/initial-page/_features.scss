@@ -1,0 +1,36 @@
+.features, .about-us{
+    h1{
+        margin-top: 50px;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .feature, .about-us-part{
+        display: flex;
+        column-gap: 80px;
+        align-items: center;
+        margin: 10px 0;
+        justify-content: center;
+        .feature-image, .about-us-image{
+            width: 95vw;
+            max-width: 400px;
+        }
+        .feature-description, .about-us-description{
+            width: 95vw;
+            max-width: 400px;
+        }
+    }
+    .subscribe-btn{
+        margin-bottom: 50px;
+    }
+}
+@media(max-width:850px){
+    .feature{
+        flex-direction: column;
+        img{
+            margin-bottom: 40px;
+        }
+    }
+    .a{
+        flex-direction: column-reverse;
+    }
+}

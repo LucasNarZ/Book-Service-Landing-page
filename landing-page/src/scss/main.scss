@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
+@import "./variables";
+@import "./subscribe";
+@import "./about-us";
+@import "./contact-us";
+@import "./plans";
+@import "./initial-page/features";
+@import "./initial-page/footer";
+@import "./initial-page/header";
+@import "./initial-page/hero";
+@import "./initial-page/opinions";
+@import "./initial-page/questions";
+@import "./client-area/choose-book";
+@import "./client-area/client-area";
+@import "./client-area/header";
+@import "./client-area/lateral-bar";
+@import "./client-area/plans";
+
+
+
+h1, h2{
+    text-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+button, li{
+    cursor: pointer;
+}
+
+.subscribe-btn{
+    width: 140px;
+    height: 45px;
+    border-radius: 50px;
+    justify-self: flex-end;
+    font-size: 16px;
+    background-color: $color-3;
+    transition: background-color .5s;
+}
+
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    h2{
+        margin: 40px 0;
+    }
+    .input1{
+        width: 90vw;
+        max-width: 400px;
+    }
+    .subscribe-btn::placeholder{
+        padding:auto;
+    }
+    input[type="submit"]{
+        cursor: pointer;
+    }
+}
+.subscribe-btn:hover{
+    background-color: rgb(97, 205, 255);
+}

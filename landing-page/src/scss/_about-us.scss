@@ -1,0 +1,43 @@
+.about-us{
+    width: 100vw;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        text-align: center;
+    }
+    & > p{
+        width: 90vw;
+        max-width: 800px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    & > h2{
+        margin-top: 50px;
+        text-align: center;
+    }
+    .about-us-part{
+        margin-top: 50px;
+        display: flex;
+        .about-us-description{
+            margin-top: 10px;
+        }
+    }
+}
+
+@media(max-width:900px){
+    .about-us-part{
+        p{
+            text-align: center;
+        }
+    }
+    .about-us-part:nth-child(odd){
+        flex-direction: column-reverse;
+        
+    }
+    .about-us-part:nth-child(even){
+        flex-direction: column;
+    }
+    
+}

@@ -1,0 +1,19 @@
+.client-area-header{
+    $padding:50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100vw - $padding * 2);
+    z-index: 100;
+    background-color: white;
+    height: $header-height;
+    position: fixed;
+    border-bottom: solid rgb(231, 231, 231) 1px;
+    padding: 0 $padding;
+    img{
+        width: 100px;
+    }
+    .person-icon{
+        font-size: 45px;
+    }
+}

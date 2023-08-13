@@ -1,0 +1,21 @@
+#footer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+    background-color: rgb(91, 91, 255);
+    color: white;
+    img{
+        width: 90px;
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+        
+    }
+    p{
+        text-align: center;
+    }
+}
